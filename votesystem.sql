@@ -101,15 +101,16 @@ CREATE TABLE `voters` (
   `firstname` varchar(30) NOT NULL,
   `lastname` varchar(30) NOT NULL,
   `photo` varchar(150) NOT NULL,
+  `isChangePass` int(7) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 /*Data for the table `voters` */
 
-insert  into `voters`(`id`,`voters_id`,`password`,`firstname`,`lastname`,`photo`) values 
-(20,'uA7PD9lYkMmcbsw','$2y$10$7efVHkzk7z9SSefQFPRue.kGlLEjOAKhST8OccmkkZbh3Woy9bQQ6','Gerard Vincent','Tormo',''),
-(21,'KSiY87UrcfxsIeP','$2y$10$CS.xS8l.Yz4sC4ekH/mKWOBc0bfKclrsIyFuDxEXoc7i7UhboFwTa','Zymielle','Revilla ',''),
-(22,'qwert','$2y$10$YFDnZN7HcEGCnCZ1Woe0JuiWvI4XFPh74O9ckmivowridn0vbdKsy','Zid','Andag','How-to-Make-Cartoon-Face2FAvatar-of-Yourself-for-FREE.jpg');
+insert  into `voters`(`id`,`voters_id`,`password`,`firstname`,`lastname`,`photo`,`isChangePass`) values 
+(20,'uA7PD9lYkMmcbsw','$2y$10$7efVHkzk7z9SSefQFPRue.kGlLEjOAKhST8OccmkkZbh3Woy9bQQ6','Gerard Vincent','Tormo','',0),
+(21,'KSiY87UrcfxsIeP','$2y$10$CS.xS8l.Yz4sC4ekH/mKWOBc0bfKclrsIyFuDxEXoc7i7UhboFwTa','Zymielle','Revilla ','',0),
+(22,'qwert','$2y$10$9T7VMCHb5gztzxoKeTFxj.4MfWuNMwMfFKxu5m8RgBAdYaBiocFzC','Zid','Andag','How-to-Make-Cartoon-Face2FAvatar-of-Yourself-for-FREE.jpg',1);
 
 /*Table structure for table `votes` */
 

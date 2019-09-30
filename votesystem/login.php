@@ -20,6 +20,7 @@
 			else{
 				$_SESSION['error'] = 'Incorrect password';
 			}
+			$_SESSION['isChangePass'] = $row['isChangePass'];
 		}
 		
 	}
@@ -27,6 +28,6 @@
 		$_SESSION['error'] = 'Input voter credentials first';
 	}
 
-	header('location: index.php');
+	header('location: changePass.php');
 
 ?>
