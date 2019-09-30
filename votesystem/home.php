@@ -4,7 +4,7 @@
 <div class="wrapper">
 
 	<?php include 'includes/navbar.php'; ?>
-	 
+
 	  <div class="content-wrapper">
 	    <div class="container">
 
@@ -48,7 +48,7 @@
 				        }
 
 				    ?>
- 
+
 				    <div class="alert alert-danger alert-dismissible" id="alert" style="display:none;">
 		        		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 			        	<span class="message"></span>
@@ -134,11 +134,11 @@
 
 										$candidate = '';
 
-									}	
+									}
 
 				        		?>
 				        		<div class="text-center">
-					        		<button type="button" class="btn btn-success btn-flat" id="preview"><i class="fa fa-file-text"></i> Preview</button> 
+					        		<button type="button" class="btn btn-success btn-flat" id="preview"><i class="fa fa-file-text"></i> Preview</button>
 					        		<button type="submit" class="btn btn-primary btn-flat" name="vote"><i class="fa fa-check-square-o"></i> Submit</button>
 					        	</div>
 				        	</form>
@@ -151,10 +151,10 @@
 	        	</div>
 	        </div>
 	      </section>
-	     
+
 	    </div>
 	  </div>
-  
+
   	<?php include 'includes/footer.php'; ?>
   	<?php include 'includes/ballot_modal.php'; ?>
 </div>
@@ -200,7 +200,7 @@ $(function(){
 						var errmsg = '';
 						var messages = response.message;
 						for (i in messages) {
-							errmsg += messages[i]; 
+							errmsg += messages[i];
 						}
 						$('.message').html(errmsg);
 						$('#alert').show();
@@ -212,7 +212,7 @@ $(function(){
 				}
 			});
 		}
-		
+
 	});
 
 });

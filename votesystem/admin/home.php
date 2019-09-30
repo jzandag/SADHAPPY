@@ -76,7 +76,7 @@
 
                 echo "<h3>".$query->num_rows."</h3>";
               ?>
-          
+
               <p>No. of Candidates</p>
             </div>
             <div class="icon">
@@ -96,7 +96,7 @@
 
                 echo "<h3>".$query->num_rows."</h3>";
               ?>
-             
+
               <p>Total Voters</p>
             </div>
             <div class="icon">
@@ -130,11 +130,7 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <h3>Votes Tally
-            <span class="pull-right">
-              <a href="print.php" class="btn btn-success btn-sm btn-flat"><span class="glyphicon glyphicon-print"></span> Print</a>
-            </span>
-          </h3>
+          <h3>Votes Tally  </h3>
         </div>
       </div>
 
@@ -143,7 +139,7 @@
         $query = $conn->query($sql);
         $inc = 2;
         while($row = $query->fetch_assoc()){
-          $inc = ($inc == 2) ? 1 : $inc+1; 
+          $inc = ($inc == 2) ? 1 : $inc+1;
           if($inc == 1) echo "<div class='row'>";
           echo "
             <div class='col-sm-6'>
@@ -159,7 +155,7 @@
               </div>
             </div>
           ";
-          if($inc == 2) echo "</div>";  
+          if($inc == 2) echo "</div>";
         }
         if($inc == 1) echo "<div class='col-sm-6'></div></div>";
       ?>

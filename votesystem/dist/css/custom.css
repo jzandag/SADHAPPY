@@ -1,3 +1,16 @@
 .main-sidebar{
-	background-color: #b16111 !important;
+	background-color: #222d32 !important;
+}
+.logo{
+	background-color: #4e0606 !important;
+}
+.header{
+	background-color: #4e0606 !important;
+}
+a::hover{
+	background-color: none !important;
+}
+.login-logo{
+	background-color: white !important;
+	margin: 0 !important;
 }

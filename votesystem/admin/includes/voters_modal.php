@@ -10,6 +10,13 @@
             <div class="modal-body">
               <form class="form-horizontal" method="POST" action="voters_add.php" enctype="multipart/form-data">
                 <div class="form-group">
+                    <label for="votersid" class="col-sm-3 control-label">Voters Id</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="votersid" name="votersid" required>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="firstname" class="col-sm-3 control-label">Firstname</label>
 
                     <div class="col-sm-9">
@@ -144,6 +151,3 @@
         </div>
     </div>
 </div>
-
-
-     

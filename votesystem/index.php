@@ -9,14 +9,24 @@
     }
 ?>
 <?php include 'includes/header.php'; ?>
+<style>
+  body{
+    margin: 0 !important;
+    padding: 0 !important ;
+    background: url(images/login-bg.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    font-family: sans-serif;
+  }
+</style>
 <body class="hold-transition login-page">
 <div class="login-box">
   	<div class="login-logo">
-  		<b>Voting System</b>
+  		<b>CPE Voting System</b>
   	</div>
-  
+
   	<div class="login-box-body">
-    	<p class="login-box-msg">Sign in to start your session</p>
+    	<p class="login-box-msg">Sign in </p>
 
     	<form action="login.php" method="POST">
       		<div class="form-group has-feedback">
@@ -38,18 +48,18 @@
   		if(isset($_SESSION['error'])){
   			echo "
   				<div class='callout callout-danger text-center mt20'>
-			  		<p>".$_SESSION['error']."</p> 
+			  		<p>".$_SESSION['error']."</p>
 			  	</div>
   			";
   			unset($_SESSION['error']);
   		}
   	?>
 </div>
-	
+
 <?php include 'includes/scripts.php' ?>
 </body>
 
-<footer>
-<p><center><b>NOTE:</b> To Create New Voter's ID and Password- Login to Admin Panel, Check Voters List and Add New Account. The System Automatically Generates VotersID </p></center>
+<!-- <footer>
+<p><center><b>NOTE:</b> Use the Admin panem to Create New Voter's ID and Password. The System Automatically Generates VotersID </p></center> -->
 </div>
 </html>

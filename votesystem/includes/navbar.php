@@ -2,7 +2,7 @@
   <nav class="navbar navbar-static-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="#" class="navbar-brand"><b>Voting System</a>
+        <a href="#" class="navbar-brand"><b>Computer Engineering Voting System</a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
           <i class="fa fa-bars"></i>
         </button>
@@ -17,7 +17,7 @@
                 <li><a href='index.php'>HOME</a></li>
                 <li><a href='transaction.php'>TRANSACTION</a></li>
               ";
-            } 
+            }
           ?>
         </ul>
       </div>
@@ -31,7 +31,7 @@
               <span class="hidden-xs"><?php echo $voter['firstname'].' '.$voter['lastname']; ?></span>
             </a>
           </li>
-          <li><a href="logout.php"><i class="fa fa-sign-out"></i> LOGOUT</a></li>  
+          <li><a href="logout.php"><i class="fa fa-sign-out"></i> LOGOUT</a></li>
         </ul>
       </div>
       <!-- /.navbar-custom-menu -->
