@@ -34,7 +34,7 @@ CREATE TABLE `admin` (
 /*Data for the table `admin` */
 
 insert  into `admin`(`id`,`username`,`password`,`firstname`,`lastname`,`photo`,`created_on`) values 
-(1,'codeprojects','$2y$10$g4m/PfziRBxoM9fvwqiS9OgxAV29w0y8..XHruyEplYPxYnhZJ6bC','Silver','Screech Owl','pup-logo.jpg','2018-04-02');
+(1,'codeprojects','$2y$10$g4m/PfziRBxoM9fvwqiS9OgxAV29w0y8..XHruyEplYPxYnhZJ6bC','Silver','Screech Owl','pup-logo.jpg','2019-10-02');
 
 /*Table structure for table `candidates` */
 
@@ -102,15 +102,18 @@ CREATE TABLE `voters` (
   `lastname` varchar(30) NOT NULL,
   `photo` varchar(150) NOT NULL,
   `isChangePass` int(7) NOT NULL,
+  `created_on` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 /*Data for the table `voters` */
 
-insert  into `voters`(`id`,`voters_id`,`password`,`firstname`,`lastname`,`photo`,`isChangePass`) values 
-(20,'uA7PD9lYkMmcbsw','$2y$10$7efVHkzk7z9SSefQFPRue.kGlLEjOAKhST8OccmkkZbh3Woy9bQQ6','Gerard Vincent','Tormo','',0),
-(21,'KSiY87UrcfxsIeP','$2y$10$CS.xS8l.Yz4sC4ekH/mKWOBc0bfKclrsIyFuDxEXoc7i7UhboFwTa','Zymielle','Revilla ','',0),
-(22,'qwert','$2y$10$9T7VMCHb5gztzxoKeTFxj.4MfWuNMwMfFKxu5m8RgBAdYaBiocFzC','Zid','Andag','How-to-Make-Cartoon-Face2FAvatar-of-Yourself-for-FREE.jpg',1);
+insert  into `voters`(`id`,`voters_id`,`password`,`firstname`,`lastname`,`photo`,`isChangePass`,`created_on`) values 
+(20,'uA7PD9lYkMmcbsw','$2y$10$7efVHkzk7z9SSefQFPRue.kGlLEjOAKhST8OccmkkZbh3Woy9bQQ6','Gerard Vincent','Tormo','',0,'2019-10-02'),
+(21,'KSiY87UrcfxsIeP','$2y$10$CS.xS8l.Yz4sC4ekH/mKWOBc0bfKclrsIyFuDxEXoc7i7UhboFwTa','Zymielle','Revilla ','',0,'2019-10-02'),
+(22,'qwertyy','$2y$10$9T7VMCHb5gztzxoKeTFxj.4MfWuNMwMfFKxu5m8RgBAdYaBiocFzC','Zid','Andag','doctor_strange_by_scarlettcindy-daon0ly.jpg',1,'2019-10-02'),
+(23,'hello','$2y$10$ss946dDABu4woOPk7bQusePoXlmO6ju.RZpy0Goza1S7dRDZ.sVLe','new','voter','',0,'2019-10-02'),
+(24,'jayvenbuyco','$2y$10$OVoY6PBnPOcawtDGmQ4zAuMr58zMsmMHpEWQgJMHor53zvSfcBP86','Jayven','Buyco','58382454_1628780550599394_7672509915214118912_n.jpg',1,'2019-10-01');
 
 /*Table structure for table `votes` */
 

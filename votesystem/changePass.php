@@ -17,7 +17,7 @@
   body{
     margin: 0 !important;
     padding: 0 !important ;
-    background: url(images/login-bg.jpg) !important;
+    background: url(images/main.jpg) !important;
     background-size: cover !important;
     background-position: center !important;
     font-family: sans-serif;
@@ -26,11 +26,11 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   	<div class="login-logo">
-  		<b>Change your password for the first time</b>
+  		<b>CPE Voting System</b>
   	</div>
 
   	<div class="login-box-body">
-    	<p class="login-box-msg">hi </p>
+    	<p class="login-box-msg">Change your password </p>
 
     	<form action="changePass1.php" method="POST">
           <div class="form-group has-feedback">
@@ -38,7 +38,7 @@
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
       		<div class="row">
-    			  <div class="col-xs-4">
+    			  <div class="col-xs-8">
           			<button type="submit" class="btn btn-primary btn-block btn-flat" name="changePass"><i class="fa fa-sign-in"></i> Change Password</button>
         		</div>
       		</div>

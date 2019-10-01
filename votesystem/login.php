@@ -16,6 +16,9 @@
 			$row = $query->fetch_assoc();
 			if(password_verify($password, $row['password'])){
 				$_SESSION['voter'] = $row['id'];
+				$_SESSION['firstname'] = $row['firstname'];
+				$_SESSION['lastname'] = $row['lastname'];
+				$_SESSION['photo'] = $row['photo'];
 			}
 			else{
 				$_SESSION['error'] = 'Incorrect password';
