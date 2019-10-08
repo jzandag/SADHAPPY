@@ -25,6 +25,16 @@
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
+		date_default_timezone_set('Asia/Manila');
+		$date = date("Y-m-d H:i:s");
+		$description = 'Added voter "'.$voter. '\"' ;
+		$sql = "INSERT INTO log ( description, date) VALUES ('$description','$date')";
+		if($conn->query($sql)){
+			
+		}
+		else{
+			$_SESSION['error'] = $conn->error;
+		}
 
 	}
 	else{

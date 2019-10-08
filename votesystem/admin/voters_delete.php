@@ -10,6 +10,17 @@
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
+
+		date_default_timezone_set('Asia/Manila');
+		$date = date("Y-m-d H:i:s");
+		$description = 'Deleted voter#'.$id. '.' ;
+		$sql = "INSERT INTO log ( description, date) VALUES ('$description','$date')";
+		if($conn->query($sql)){
+			
+		}
+		else{
+			$_SESSION['error'] = $conn->error;
+		}
 	}
 	else{
 		$_SESSION['error'] = 'Select item to delete first';

@@ -48,7 +48,7 @@ CREATE TABLE `candidates` (
   `photo` varchar(150) NOT NULL,
   `platform` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
 
 /*Data for the table `candidates` */
 
@@ -70,7 +70,25 @@ insert  into `candidates`(`id`,`position_id`,`firstname`,`lastname`,`photo`,`pla
 (42,12,'Fidel V.','Ramos','fidel.jpg','I have asked Mang Pandoy and his family to be my guests in this inaugural ceremony as proof of my resolve to obtain for families like theirs all over the country the humanities of life. Poverty we must learn to regard as another form of tyranny, and we must wage against it the moral equivalent of war.'),
 (43,12,'Joseph',' Estrada','ee.jpg','Ngayon pa lamang, ang mga kamag-anak ko ay nilalapitan na ng kung sinu-sino. Kung anu-anong deal at kickback ang ipinapangako.\r\n\r\nBinabalaan ko sila. Walang kaibigan, walang kumpare, walang kamag-anak o anak na maaaring magsamantala sa ngayon. At ngayon pa lamang sinasabi ko sa inyo, nag-aaksaya lamang kayo ng panahon. Huwag ninyo akong subukan.'),
 (44,12,'Gloria Macapagal','Arroyo','gma.jpg','I shall make good and I shall do good for the good of all and not just for the cameras. The canvassing for public attention is over. I expect you to get up every day to hold me accountable, in the full glare of transparent leadership. I shall wield the power of the Presidency to uphold truth and justice.\r\n\r\nI devote my life and treasure to serving your mandate. Do your responsibility and I shall do mine. United, how can we lose? Together, we will prevail'),
-(45,12,'Benigno ','Aquino III','be3.jpg','Walang lamangan, walang padrino, at walang pagnanakaw. Walang wang-wang, walang counterflow, walang tong. Panahon na upang tayo ay muling magkawang-gawa. Nandito tayo ngayon dahil sama-sama tayong nanindigan at nagtiwala na may pag-asa.\r\n\r\n(No more taking advantage, no more patronage politics, no more stealing. No sirens, no counterflow, no bribes. It is time for us to do charity again. We are here today because together we took a stand and trusted there is hope.)');
+(45,12,'Benigno ','Aquino III','be3.jpg','Walang lamangan, walang padrino, at walang pagnanakaw. Walang wang-wang, walang counterflow, walang tong. Panahon na upang tayo ay muling magkawang-gawa. Nandito tayo ngayon dahil sama-sama tayong nanindigan at nagtiwala na may pag-asa.\r\n\r\n(No more taking advantage, no more patronage politics, no more stealing. No sirens, no counterflow, no bribes. It is time for us to do charity again. We are here today because together we took a stand and trusted there is hope.)'),
+(46,13,'Mickey','Mouse','ee.JPG','jkl'),
+(47,13,'minnie','mouse','48359947_595014730919149_9130185256714895360_n.jpg','fghj');
+
+/*Table structure for table `log` */
+
+DROP TABLE IF EXISTS `log`;
+
+CREATE TABLE `log` (
+  `log_pk` int(7) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  PRIMARY KEY (`log_pk`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+/*Data for the table `log` */
+
+insert  into `log`(`log_pk`,`description`,`date`) values 
+(1,'hello','2019-10-02 00:00:00');
 
 /*Table structure for table `positions` */
 
@@ -82,13 +100,14 @@ CREATE TABLE `positions` (
   `max_vote` int(11) NOT NULL,
   `priority` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 /*Data for the table `positions` */
 
 insert  into `positions`(`id`,`description`,`max_vote`,`priority`) values 
-(11,'TRIAL',100,1),
-(12,'BEST PRESIDENT OF THE PHILIPPINES',100,2);
+(11,'TRIAL',100,2),
+(12,'BEST PRESIDENT OF THE PHILIPPINES',100,1),
+(13,'best subject',1,3);
 
 /*Table structure for table `voters` */
 
@@ -104,7 +123,7 @@ CREATE TABLE `voters` (
   `isChangePass` int(7) NOT NULL,
   `created_on` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 /*Data for the table `voters` */
 
@@ -113,7 +132,10 @@ insert  into `voters`(`id`,`voters_id`,`password`,`firstname`,`lastname`,`photo`
 (21,'KSiY87UrcfxsIeP','$2y$10$CS.xS8l.Yz4sC4ekH/mKWOBc0bfKclrsIyFuDxEXoc7i7UhboFwTa','Zymielle','Revilla ','',0,'2019-10-02'),
 (22,'qwertyy','$2y$10$9T7VMCHb5gztzxoKeTFxj.4MfWuNMwMfFKxu5m8RgBAdYaBiocFzC','Zid','Andag','doctor_strange_by_scarlettcindy-daon0ly.jpg',1,'2019-10-02'),
 (23,'hello','$2y$10$ss946dDABu4woOPk7bQusePoXlmO6ju.RZpy0Goza1S7dRDZ.sVLe','new','voter','',0,'2019-10-02'),
-(24,'jayvenbuyco','$2y$10$OVoY6PBnPOcawtDGmQ4zAuMr58zMsmMHpEWQgJMHor53zvSfcBP86','Jayven','Buyco','58382454_1628780550599394_7672509915214118912_n.jpg',1,'2019-10-01');
+(24,'jayvenbuyco','$2y$10$OVoY6PBnPOcawtDGmQ4zAuMr58zMsmMHpEWQgJMHor53zvSfcBP86','Jayven','Buyco','58382454_1628780550599394_7672509915214118912_n.jpg',1,'2019-10-01'),
+(25,'poo','$2y$10$oHEPlSMbdI1OMAXTRh3IlOzCjDjMYxHxZg40cENEam4/zjqdpSude','poo','poo','',1,'2019-10-01'),
+(26,'hellooo','$2y$10$Ja9AhMVa.wzyjEZbNfekCer2ufOMnMh0PAnfvIp3hjgxFCFRWtQMy','qwe','wee','',0,'2019-10-08'),
+(27,'helloooooo','$2y$10$fx9nCmeNAWc6jGvtx9mkoeQYdORMmVuLFexFKGWzzMKfMXE1SJzSC','we','we','',0,'2019-10-08');
 
 /*Table structure for table `votes` */
 
@@ -125,56 +147,12 @@ CREATE TABLE `votes` (
   `candidate_id` int(11) NOT NULL,
   `position_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=126 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=127 DEFAULT CHARSET=latin1;
 
 /*Data for the table `votes` */
 
 insert  into `votes`(`id`,`voters_id`,`candidate_id`,`position_id`) values 
-(81,5,26,8),
-(82,5,18,9),
-(83,5,19,9),
-(84,5,21,9),
-(85,5,24,9),
-(86,6,26,8),
-(87,6,18,9),
-(88,6,19,9),
-(89,7,26,8),
-(90,7,18,9),
-(91,7,19,9),
-(92,7,22,9),
-(93,8,25,8),
-(94,8,18,9),
-(95,8,19,9),
-(96,9,26,8),
-(97,9,18,9),
-(98,9,19,9),
-(99,9,23,9),
-(100,10,26,8),
-(101,10,18,9),
-(102,10,22,9),
-(103,11,26,8),
-(104,11,18,9),
-(105,11,22,9),
-(106,12,25,8),
-(107,12,26,8),
-(108,12,18,9),
-(109,12,21,9),
-(110,12,23,9),
-(111,13,25,8),
-(112,13,26,8),
-(113,13,18,9),
-(114,13,20,9),
-(115,13,22,9),
-(116,14,26,8),
-(117,14,18,9),
-(118,14,19,9),
-(119,14,24,9),
-(120,15,25,8),
-(121,15,18,9),
-(122,16,25,8),
-(123,16,18,9),
-(124,17,25,8),
-(125,17,18,9);
+(126,22,47,13);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

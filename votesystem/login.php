@@ -19,6 +19,17 @@
 				$_SESSION['firstname'] = $row['firstname'];
 				$_SESSION['lastname'] = $row['lastname'];
 				$_SESSION['photo'] = $row['photo'];
+
+				date_default_timezone_set('Asia/Manila');
+				$date = date("Y-m-d H:i:s");
+				$description = 'User '. $row['voters_id']. ' logged in.' ;
+				$sql = "INSERT INTO log ( description, date) VALUES ('$description','$date')";
+				if($conn->query($sql)){
+					
+				}
+				else{
+					$_SESSION['error'] = $conn->error;
+				}
 			}
 			else{
 				$_SESSION['error'] = 'Incorrect password';
